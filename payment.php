@@ -79,7 +79,7 @@ $(document).ready(function()
 	$(replace_button).click(function()
 	{
     	$(this).parent().remove();
-		$(wrapper).append(accepted);
+		$(wrapper)=accepted;
 		
 	});
 	
