@@ -60,7 +60,7 @@ while($pay = pg_fetch_row($pay_array))
 			<TD>$order_id</TD>
 			<TD>$total_price</TD>
 			<TD><div class='field_wrapper'>
-			<div><a href='javascript:void(0);' class='replaceButton'><button NAME='confirm' id=$order_id>Confirm</button></a></a></div>
+			<div><a href='javascript:void(0);' class='replaceButton' id><button NAME='confirm' id=$order_id>Confirm</button></a></a></div>
 			</div></TD>
 			</TR>";
 
@@ -78,8 +78,8 @@ $(document).ready(function()
 	var accepted = '<div><center>confirmed</center></div>';
 	$(replace_button).click(function()
 	{
-    	$(this).parent().remove();
-		$(wrapper)=accepted;
+    	$(this).replaceWith(
+          "<p><center>confirmed</center></p>");
 		
 	});
 	
