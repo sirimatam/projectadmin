@@ -45,11 +45,11 @@ if ($_GET['id'] = '')
 $pay_array = pg_query($db,"SELECT * FROM payment WHERE pay_check = '0'");
 while($pay = pg_fetch_row($pay_array))
 {
-	$pay_id = $pay("pay_id");
-	$pay_slip = $pay("pay_slip");
-	$pay_date = $pay("pay_date");
-	$pay_time = $pay("pay_time");
-	$order_id = $pay("order_id");
+	$pay_id = $pay[0];
+	$pay_slip = $pay[1];
+	$pay_date = $pay[2];
+	$pay_time = $pay[3];
+	$order_id = $pay[4];
 	$total_price = pg_query($db,"SELECT total_price FROM orderlist WHERE order_id = '$order_id'");
 	
 			echo "<TR>
