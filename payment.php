@@ -59,8 +59,8 @@ while($pay = pg_fetch_row($pay_array))
 			<TD>$pay_time</TD>
 			<TD>$order_id</TD>
 			<TD>$total_price</TD>
-			<TD><div class="field_wrapper">
-			<div><a href="javascript:void(0);" class="replaceButton"><a href="payment.php?id=$order_id"><button NAME="confirm" id=$order_id" >Confirm</button></a></a></div>
+			<TD><div class='field_wrapper'>
+			<div><a href='javascript:void(0);' class='replaceButton'><a href='payment.php?id=$order_id'><button NAME='confirm' id=$order_id>Confirm</button></a></a></div>
 			</div></TD>
 			</TR>";
 
