@@ -28,14 +28,14 @@ require("connection.php");
 </TR>
 
 <?php
-if ($_GET['id'] = '')
+/*if ($_GET['id'] = '')
 {
 	$order_id = $_GET['id'];
 	pg_query($db,"UPDATE FROM TABLE orderlist SET order_status = 'waiting for packing' WHERE order_id = '$order_id'");
 	pg_query($db,"UPDATE FROM TABLE payment SET pay_check = '1' WHERE order_id = '$order_id'");
 }
 
-
+*/
 
 
 ?>
@@ -60,7 +60,7 @@ while($pay = pg_fetch_row($pay_array))
 			<TD>$order_id</TD>
 			<TD>$total_price</TD>
 			<TD><div class='field_wrapper'>
-			<div><a href='javascript:void(0);' class='replaceButton'><a href='payment.php?id=$order_id'><button NAME='confirm' id=$order_id>Confirm</button></a></a></div>
+			<div><a href='javascript:void(0);' class='replaceButton'><button NAME='confirm' id=$order_id>Confirm</button></a></a></div>
 			</div></TD>
 			</TR>";
 
