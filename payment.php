@@ -59,22 +59,27 @@ while($pay = pg_fetch_row($pay_array))
 			<TD>$pay_time</TD>
 			<TD>$order_id</TD>
 			<TD>$total_price</TD>
-			<TD><div class='field_wrapper'>
-			<div><a href='javascript:void(0);' class='replaceButton' id><button NAME='confirm' id=$order_id>Confirm</button></a></a></div>
-			</div></TD>
+			<TD>
+			<div><a href='javascript:void(0);' class='replaceButton' id><button NAME='confirm' id=$order_id onclick=update_status($order_id)>Confirm</button></a></a></div>
+			</TD>
 			</TR>";
 
 }
 ?>
 
 </table>
-
+<?php
+function update_status($order_id)
+{
+	pg_query($db,"UPDATE FROM TABLE orderlist SET order_status = 'waiting for packing' WHERE order_id = '$order_id'");
+	pg_query($db,"UPDATE FROM TABLE payment SET pay_check = '1' WHERE order_id = '$order_id'");	
+}
+?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function()
 {
 	var replace_button = $('.replaceButton');
-	var wrapper = $('.field_wrapper');
 	var accepted = '<div><center>confirmed</center></div>';
 	$(replace_button).click(function()
 	{
