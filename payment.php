@@ -28,14 +28,17 @@ require("connection.php");
 </TR>
 
 <?php
-if ($_POST['action'] !='')
+$pay_num = pg_num_rows(pg_query($db,"SELECT order_id FROM payment WHERE pay_check = '0'"));
+for($i=0;$i<$pay_num;$i++)
 {
-	$order_id = $_POST['action'];
+if ($_POST['action[$i]'] !='')
+{
+	$order_id = $_POST['action[$i]'];
 	pg_query($db,"UPDATE orderlist SET order_status = 'waiting for packing' WHERE order_id = '$order_id'");
 	pg_query($db,"UPDATE payment SET pay_check = '1' WHERE order_id = '$order_id'");
 }
 
-
+}
 
 
 ?>
@@ -59,7 +62,7 @@ while($pay = pg_fetch_row($pay_array))
 			<TD>$pay_time</TD>
 			<TD>$order_id</TD>
 			<TD>$total_price</TD>
-			<TD><INPUT TYPE='hidden' name='action' value=$order_id><INPUT TYPE='submit' value='Confirm'></TD>
+			<TD><INPUT TYPE='hidden' name='action[]' value=$order_id><INPUT TYPE='submit' value='Confirm'></TD>
 			</TR>";
 
 }
