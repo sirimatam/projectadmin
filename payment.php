@@ -59,7 +59,7 @@ while($pay = pg_fetch_row($pay_array))
 			<TD>$pay_time</TD>
 			<TD>$order_id</TD>
 			<TD>$total_price</TD>
-			<TD><INPUT TYPE='hidden' name='action' value='status'><INPUT TYPE='submit' value='Confirm'></TD>
+			<TD><INPUT TYPE='hidden' name='action' value=$order_id><INPUT TYPE='submit' value='Confirm'></TD>
 			</TR>";
 
 }
