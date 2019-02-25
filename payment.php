@@ -39,7 +39,7 @@ if ($_POST['action'] !='')
 
 
 ?>
-<form method='post' action='payment.php'>
+<FORM METHOD=POST ACTION='payment.php'>
 <?php
 //show payment list
 $pay_array = pg_query($db,"SELECT * FROM payment WHERE pay_check = '0'");
