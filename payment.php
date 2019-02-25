@@ -46,7 +46,7 @@ if ($_POST['action'] != '')
 
 
 ?>
-<FORM METHOD=POST ACTION='payment.php'>
+
 <?php
 //show payment list
 $pay_array = pg_query($db,"SELECT * FROM payment WHERE pay_check = '0'");
@@ -59,7 +59,7 @@ while($pay = pg_fetch_row($pay_array))
 	$order_id = $pay[4];
 	$total_price = pg_fetch_row(pg_query($db,"SELECT total_price FROM orderlist WHERE order_id = '$order_id'"));
 	
-			echo "<TR>
+			echo "<FORM METHOD=POST ACTION='payment.php'><TR>
 			<TD>$pay_id</TD>
 			<TD>$pay_slip</TD>
 			<TD>$pay_date</TD>
@@ -67,11 +67,11 @@ while($pay = pg_fetch_row($pay_array))
 			<TD>$order_id</TD>
 			<TD>$total_price</TD>
 			<TD><INPUT TYPE='hidden' name='action' id=$order_id value='$order_id'><INPUT TYPE='submit' value='Confirm'></TD>
-			</TR>";
+			</TR></form>";
 
 }
 ?>
-</form>
+
 </table>
 <?php
 function update_status($order_id)
