@@ -60,7 +60,7 @@ while($pay = pg_fetch_row($pay_array))
 			<TD>$order_id</TD>
 			<TD>$total_price</TD>
 			<TD>
-			<div>><a href='/payment.php?id='order1'' ><button NAME='confirm'>Confirm</button></a></div>
+			<div><a href='/payment.php?id='order1'' ><button NAME='confirm'>Confirm</button></a></div>
 			</TD>
 			</TR>";
 
