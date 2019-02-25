@@ -28,9 +28,9 @@ require("connection.php");
 </TR>
 
 <?php
-if ISSET($_POST['action'])
+if ($_POST['action'] !='')
 {
-	$order_id = $_POST['id'];
+	$order_id = $_POST['action'];
 	pg_query($db,"UPDATE FROM TABLE orderlist SET order_status = 'waiting for packing' WHERE order_id = $order_id");
 	pg_query($db,"UPDATE FROM TABLE payment SET pay_check = '1' WHERE order_id = $order_id");
 }
