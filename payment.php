@@ -28,7 +28,7 @@ require("connection.php");
 </TR>
 
 <?php
-if ($_POST['action'] = 'status')
+if ($_GET['id'] != '')
 {
 	$order_id = $_GET['id'];
 	pg_query($db,"UPDATE FROM TABLE orderlist SET order_status = 'waiting for packing' WHERE order_id = 'order1'");
@@ -60,7 +60,7 @@ while($pay = pg_fetch_row($pay_array))
 			<TD>$order_id</TD>
 			<TD>$total_price</TD>
 			<TD>
-			<div><form method = 'post' action='payment.php'><a href='javascript:void(0);' class='replaceButton' id><INPUT TYPE='hidden' name='action' value='status'><button NAME='confirm' id=$order_id >Confirm</button></form></a></div>
+			<div>><a href='/payment.php?id='order1'' ><button NAME='confirm' id=$order_id >Confirm</button></a></div>
 			</TD>
 			</TR>";
 
