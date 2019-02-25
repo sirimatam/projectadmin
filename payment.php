@@ -29,14 +29,14 @@ require("connection.php");
 
 <?php
 
-if ($_POST['action'][0] != '')
+if ($_POST['action'][1] != '')
 {
 	//$pay_num = pg_num_rows(pg_query($db,"SELECT order_id FROM payment WHERE pay_check = '0'"));
 	//for($i=0;$i<$pay_num;$i++)
 	//{
 	//if ($_POST['action[$i]'] != '')
 	//{
-	$order_id = $_POST['action'][0];
+	$order_id = $_POST['action'][1];
 	pg_query($db,"UPDATE orderlist SET order_status = 'waiting for packing' WHERE order_id = '$order_id'");
 	pg_query($db,"UPDATE payment SET pay_check = '1' WHERE order_id = '$order_id'");
 	//}
