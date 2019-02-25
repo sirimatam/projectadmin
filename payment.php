@@ -28,9 +28,9 @@ require("connection.php");
 </TR>
 
 <?php
-if ($_GET['id'] != '')
+if ISSET($_POST['action'])
 {
-	$order_id = $_GET['id'];
+	$order_id = $_POST['id'];
 	pg_query($db,"UPDATE FROM TABLE orderlist SET order_status = 'waiting for packing' WHERE order_id = $order_id");
 	pg_query($db,"UPDATE FROM TABLE payment SET pay_check = '1' WHERE order_id = $order_id");
 }
@@ -39,7 +39,7 @@ if ($_GET['id'] != '')
 
 
 ?>
-
+<form method='post' action='payment.php'>
 <?php
 //show payment list
 $pay_array = pg_query($db,"SELECT * FROM payment WHERE pay_check = '0'");
@@ -59,14 +59,12 @@ while($pay = pg_fetch_row($pay_array))
 			<TD>$pay_time</TD>
 			<TD>$order_id</TD>
 			<TD>$total_price</TD>
-			<TD>
-			<div><a href='payment.php?id=$order_id' ><button NAME='confirm'>Confirm</button></a></div>
-			</TD>
+			<TD><INPUT TYPE='hidden' name='action' value='status'><INPUT TYPE='submit' value='status'></TD>
 			</TR>";
 
 }
 ?>
-
+</form>
 </table>
 <?php
 function update_status($order_id)
