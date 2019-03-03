@@ -124,7 +124,7 @@ if($_POST['action']=='add')
 				$new_filename=$fid.".".$fname[1]; 
 				move_uploaded_file($_FILES["file"]["tmp_name"],
 				"upload/" . $new_filename);
-				pg_query($db,"UPDATE stock SET sku_pic='$new_filename' WHERE sku_id='$fid'" ; 
+				pg_query($db,"UPDATE stock SET sku_pic='$new_filename' WHERE sku_id='$fid'") ; 
 			}
 			$fname=explode(".",$_FILES["file"]["name"]);
 			$new_filename=$fid_prod.".".$fname[1]; 
