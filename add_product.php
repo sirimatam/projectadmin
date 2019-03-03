@@ -45,8 +45,8 @@ $prod_type_err = $prod_id_err = $prod_name_err = $prod_des_err = $sku_size_err =
 $prod_price_err = $prod_pro_price_err = $sku_qtt_err = 0;
 
 
-//if(empty($_POST['prod_type']) { $prod_type_err = 'กรุณาใส่ประเภทสินค้า'; }
-if(empty($_POST['prod_id']) { $prod_name_err = 'กรุณาใส่รหัสสินค้า'; }
+if(empty($_POST['prod_type'])) { $prod_type_err = 'กรุณาใส่ประเภทสินค้า'; }
+if(empty($_POST['prod_id'])) { $prod_name_err = 'กรุณาใส่รหัสสินค้า'; }
 	else
 	{
 		$prod_id = $_POST['prod_id'];
@@ -59,9 +59,9 @@ if(empty($_POST['prod_id']) { $prod_name_err = 'กรุณาใส่รห�
 			}
 		}
 	}
-if(empty($_POST['prod_name']) { $prod_name_err = 'กรุณาใส่ชื่อสินค้า'; }
-if(empty($_POST['prod_des']) { $prod_des_err = 'กรุณาใส่รหัสสินค้า'; }
-if(empty($_POST['sku_id']) { $sku_id_err = 'กรุณาใส่รหัส sku'; }
+if(empty($_POST['prod_name'])) { $prod_name_err = 'กรุณาใส่ชื่อสินค้า'; }
+if(empty($_POST['prod_des'])) { $prod_des_err = 'กรุณาใส่รหัสสินค้า'; }
+if(empty($_POST['sku_id'])) { $sku_id_err = 'กรุณาใส่รหัส sku'; }
 	else
 	{
 		$sku_id = $_POST['sku_id'];
@@ -74,11 +74,11 @@ if(empty($_POST['sku_id']) { $sku_id_err = 'กรุณาใส่รหัส
 			}
 		}
 	}
-if(empty($_POST['sku_color']) { $sku_color_err = 'กรุณาใส่สีสินค้า'; }
-if(empty($_POST['sku_size']) { $sku_size_err = 'กรุณาใส่สีสินค้า'; }
-if(empty($_POST['prod_price']) { $prod_price_err = 'กรุณาใส่ราคา'; }
-if(empty($_POST['prod_pro_price']) { $prod_pro_price_err = 'กรุณาใส่ราคาโปรโมชั่น'; }
-if(empty($_POST['sku_qtt']) { $sku_qtt_err = 'กรุณาใส่จำนวนสินค้า'; }
+if(empty($_POST['sku_color'])) { $sku_color_err = 'กรุณาใส่สีสินค้า'; }
+if(empty($_POST['sku_size'])) { $sku_size_err = 'กรุณาใส่สีสินค้า'; }
+if(empty($_POST['prod_price'])) { $prod_price_err = 'กรุณาใส่ราคา'; }
+if(empty($_POST['prod_pro_price'])) { $prod_pro_price_err = 'กรุณาใส่ราคาโปรโมชั่น'; }
+if(empty($_POST['sku_qtt'])) { $sku_qtt_err = 'กรุณาใส่จำนวนสินค้า'; }
 
 
 ?>
