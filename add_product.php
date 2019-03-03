@@ -106,7 +106,7 @@ if($_POST['action']=='add')
 
 	pg_query($db,"INSERT INTO product (prod_id,prod_name,prod_type,prod_description,prod_price,prod_pro_price) VALUES ('$prod_id','$prod_name','$prod_type','$prod_description','$prod_price','$prod_pro_price')");
 	$fid_prod = $prod_id;
-	
+}
 	//upload pic
 	if($_FILES["file"])
 	{
@@ -172,7 +172,7 @@ if($_POST['action']=='add')
 	{
 		echo "no file";
 	}
-}
+
 
 
 ?>
