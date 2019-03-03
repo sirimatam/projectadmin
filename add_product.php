@@ -166,7 +166,7 @@ if($_POST['action']=='add')
 
 
 
-<FORM METHOD=POST ACTION="add_product.php" enctype="multipart/form-data">
+<FORM METHOD=POST ACTION="" enctype="multipart/form-data">
 
 
 <TABLE>
