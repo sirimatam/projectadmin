@@ -204,7 +204,7 @@ if($_POST['action']=='add')
 	ไซส์<INPUT TYPE="text" NAME="sku_size[]" value="" >
 	จำนวนสินค้า<INPUT TYPE="text" NAME="sku_qtt[]" value="" >
 	<input type="file" name="file" id="file">
-	<a href="javascript:void(0);" class="add_input_button"><button NAME="addsku" id="addsku"" >Add SKU</button></a></p>
+	<a href="javascript:void(0);" class="add_input_button">add_sku</a></p>
 </div>
 </div>
 
