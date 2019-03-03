@@ -45,7 +45,7 @@ $prod_type_err = $prod_id_err = $prod_name_err = $prod_des_err = $sku_size_err =
 $prod_price_err = $prod_pro_price_err = $sku_qtt_err = 0;
 
 
-if(empty($_POST['prod_type']) { $prod_type_err = 'กรุณาใส่ประเภทสินค้า'; }
+//if(empty($_POST['prod_type']) { $prod_type_err = 'กรุณาใส่ประเภทสินค้า'; }
 if(empty($_POST['prod_id']) { $prod_name_err = 'กรุณาใส่รหัสสินค้า'; }
 	else
 	{
