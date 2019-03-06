@@ -23,7 +23,7 @@ if ($_GET['id']!='')
 
 <form action="uploading.php" method="post" enctype="multipart/form-data">
     <p>การแจ้งชำระเงิน:</p><br>
-	<input type="text" name="รหัสใบสั่งซื้อ" id="orderid" value="<?php echo $order_id ?>">
+	<input type="text" name="รหัสใบสั่งซื้อ" id="orderid" value="<?php echo $order_id; ?>">
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit">
 </form>
