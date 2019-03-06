@@ -35,7 +35,7 @@ if ($_GET['id']!='')
 			date_default_timezone_set("Asia/Bangkok");
 			$date = date("Y-m-d");
 			$time = date("H:i:s");
-			pg_query($db,"INSERT INTO payment (pay_slip,pay_date,pay_time,order_id,pay_check) VALUES ('$new_filename','$date','$time','$order_id','0')")
+			pg_query($db,"INSERT INTO payment (pay_slip,pay_date,pay_time,order_id,pay_check) VALUES ('$new_filename','$date','$time','$order_id','0')");
 			
 		}
 	}
