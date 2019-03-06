@@ -1,8 +1,5 @@
 <?php
-
-
 require("connection.php");
-
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -18,12 +15,12 @@ require("connection.php");
 
 
 <form action="uploading.php" method="post" enctype="multipart/form-data">
-    การแจ้งชำระเงิน:
+    <p>การแจ้งชำระเงิน:</p><br>
 	<input type="text" name="รหัสใบสั่งซื้อ" id="orderid">
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit">
 </form>
->
+
 
 
 </BODY>
