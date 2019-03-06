@@ -15,7 +15,8 @@ require("connection.php");
 <?php
 if ($_GET['id']!='')
 {
-	$order_id = $_GET['id'];	
+	$order_id = $_GET['id'];
+	echo <h>$order_id</h>;
 }
 	
 	
