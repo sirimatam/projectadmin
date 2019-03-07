@@ -19,7 +19,7 @@ if ($_GET['id']!='')
 	$order_id = $_GET['id'];
 	echo '<h>'.$order_id.'</h>';
 }
-	
+	/*
 	if($_FILES["fileToUpload"])
 	{
 		if ($_FILES["fileToUpload"]["error"] > 0)
@@ -44,7 +44,7 @@ if ($_GET['id']!='')
 	{
 		echo "no file";
 	}	
-
+*/
 	
 ?>
 
